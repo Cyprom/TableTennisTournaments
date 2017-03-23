@@ -1,5 +1,0 @@
-E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments\bin\Debug\Cyprom.TableTennisTournaments.Model.dll
-E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments\bin\Debug\Cyprom.TableTennisTournaments.Model.pdb
-E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments\obj\Debug\Cyprom.TableTennisTournaments.Model.dll
-E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments\obj\Debug\Cyprom.TableTennisTournaments.Model.pdb
-E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments\obj\Debug\Cyprom.TableTennisTournaments.Model.csprojResolveAssemblyReference.cache
