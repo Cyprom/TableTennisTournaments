@@ -11,7 +11,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Tables" />
-        <DataGrid Grid.Row="1" Name="grdTables" AutoGenerateColumns="False" SelectionMode="Single" SelectionChanged="TableSelected">
+        <DataGrid Grid.Row="1" Name="grdTables" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="TableSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Number" Binding="{Binding Number}" />
             </DataGrid.Columns>

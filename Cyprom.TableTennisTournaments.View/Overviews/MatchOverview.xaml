@@ -11,7 +11,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Matches" />
-        <DataGrid Grid.Row="1" Name="grdMatches" AutoGenerateColumns="False" SelectionMode="Single" SelectionChanged="MatchSelected">
+        <DataGrid Grid.Row="1" Name="grdMatches" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="MatchSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Side 1" Binding="{Binding PlayingUnit1.FullName}" />
                 <DataGridTextColumn Header="Side 2" Binding="{Binding PlayingUnit2.FullName}" />

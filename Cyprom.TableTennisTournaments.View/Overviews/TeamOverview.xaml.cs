@@ -2,6 +2,7 @@
 using Cyprom.TableTennisTournaments.Model.Enums;
 using Cyprom.TableTennisTournaments.View.Details;
 using Cyprom.TableTennisTournaments.View.Dialogs;
+using Cyprom.TableTennisTournaments.View.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -54,13 +55,16 @@ namespace Cyprom.TableTennisTournaments.View.Overviews
 
         private void CreateTeam(object sender, RoutedEventArgs e)
         {
-            // TODO: Create through Business.TournamentManager
-            //var dialog = new TeamCreationDialog();
-            //if (dialog.ShowDialog().GetValueOrDefault())
-            //{
-            //    dialog.Team.Tournament = ParentView.Tournament;
-            //    Refresh();
-            //}
+            var dialog = new TeamCreationDialog();
+            if (dialog.ShowDialog().GetValueOrDefault())
+            {
+                var tournamentDetails = this.FindParent<TournamentDetails>();
+                if (tournamentDetails != null)
+                {
+                    dialog.Team.Tournament = tournamentDetails.Tournament;
+                    SetTeams(tournamentDetails.Tournament.Teams);
+                }
+            }
         }
 
         private void ViewTeam(object sender, RoutedEventArgs e)

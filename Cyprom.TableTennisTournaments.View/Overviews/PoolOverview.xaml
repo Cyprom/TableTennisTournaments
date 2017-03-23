@@ -11,7 +11,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Pools" />
-        <DataGrid Grid.Row="1" Name="grdPools" AutoGenerateColumns="False" SelectionMode="Single" SelectionChanged="PoolSelected">
+        <DataGrid Grid.Row="1" Name="grdPools" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="PoolSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Letter" Binding="{Binding Letter}" />
             </DataGrid.Columns>

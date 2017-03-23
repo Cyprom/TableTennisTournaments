@@ -1,4 +1,4 @@
-﻿using Cyprom.TableTennisTournaments.Business;
+﻿using Cyprom.TableTennisTournaments.Business.Managers;
 using Cyprom.TableTennisTournaments.Model;
 using Cyprom.TableTennisTournaments.Model.Enums;
 using Cyprom.TableTennisTournaments.Model.Managers;

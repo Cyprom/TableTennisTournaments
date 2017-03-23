@@ -11,7 +11,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Teams" />
-        <DataGrid Grid.Row="1" Name="grdTeams" AutoGenerateColumns="False" SelectionMode="Single" SelectionChanged="TeamSelected">
+        <DataGrid Grid.Row="1" Name="grdTeams" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="TeamSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Player 1" Binding="{Binding Name1}" />
                 <DataGridTextColumn Header="Ranking 1" Binding="{Binding Ranking1}" />

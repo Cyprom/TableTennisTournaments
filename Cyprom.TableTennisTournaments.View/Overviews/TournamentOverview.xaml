@@ -15,7 +15,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Tournaments" />
-        <DataGrid Grid.Row="1" Name="grdTournaments" AutoGenerateColumns="False" SelectionMode="Single" SelectionChanged="TournamentSelected">
+        <DataGrid Grid.Row="1" Name="grdTournaments" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single" SelectionChanged="TournamentSelected">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
                 <DataGridTextColumn Header="Date" Binding="{Binding Date, Converter={StaticResource DateConverter}}" />

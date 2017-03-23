@@ -125,6 +125,7 @@
     <Compile Include="Dialogs\TournamentCreationDialog.xaml.cs">
       <DependentUpon>TournamentCreationDialog.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Extensions\DependencyObjectExtensions.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

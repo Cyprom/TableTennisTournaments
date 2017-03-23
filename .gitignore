@@ -10,3 +10,5 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
+*.suo
+*.user

@@ -6,8 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cyprom.TableTennisTournaments.Business
+namespace Cyprom.TableTennisTournaments.Business.Managers
 {
+
     public static class TournamentManager
     {
         // TODO: Properly generate all pools, finale rounds and matches
