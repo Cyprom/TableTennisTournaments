@@ -104,12 +104,14 @@ namespace Cyprom.TableTennisTournaments.View.Details
                     ovwTeams.SetTeams(_tournament.Teams);
                     ovwPlayers.SetPlayers(_tournament.Players);
                     tabPlayers.Visibility = Visibility.Visible;
+                    tabPlayers.IsSelected = true;
                     break;
                 case PlayType.Double:
                     tabPlayers.Visibility = Visibility.Collapsed;
                     ovwPlayers.SetPlayers(_tournament.Players);
                     ovwTeams.SetTeams(_tournament.Teams);
                     tabTeams.Visibility = Visibility.Visible;
+                    tabTeams.IsSelected = true;
                     break;
             }
         }
@@ -125,6 +127,8 @@ namespace Cyprom.TableTennisTournaments.View.Details
             btnStart.IsEnabled = false;
 
             // Load and show all
+            ovwPlayers.ReadOnly = true;
+            ovwTeams.ReadOnly = true;
             ovwTables.SetTables(_tournament.Tables);
             ovwPools.SetPools(_tournament.Pools);
             //ovwFinaleRounds.Refresh();
