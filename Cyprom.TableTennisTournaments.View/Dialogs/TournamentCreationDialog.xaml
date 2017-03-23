@@ -1,0 +1,33 @@
+﻿<Window x:Class="Cyprom.TableTennisTournaments.View.Dialogs.TournamentCreationDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TournamentCreationDialog" Height="250" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Name:" />
+        <TextBox Grid.Row="0" Grid.Column="1" Name="txtName" Margin="3" />
+        <Label Grid.Row="1" Grid.Column="0" Content="Type:" />
+        <ComboBox Grid.Row="1" Grid.Column="1" Name="cmbType" Margin="3" DisplayMemberPath="Value" />
+        <Label Grid.Row="2" Grid.Column="0" Content="Tables:" />
+        <TextBox Grid.Row="2" Grid.Column="1" Name="txtTables" Text="4" Margin="3" PreviewTextInput="ValidateNumericInput" />
+        <Label Grid.Row="3" Grid.Column="0" Content="Pools required:" />
+        <CheckBox Grid.Row="3" Grid.Column="1" Name="chkPoolsRequired" IsChecked="True" Margin="3" VerticalAlignment="Center" />
+        <Label Grid.Row="4" Grid.Column="0" Content="Finale rounds (max):" />
+        <TextBox Grid.Row="4" Grid.Column="1" Name="txtMaxFinaleRounds" Text="3" Margin="3" PreviewTextInput="ValidateNumericInput" />
+        <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" VerticalAlignment="Bottom">
+            <Button Content="Ok" Name="btnOk" Click="btnOk_Click" IsDefault="True" Margin="5" />
+            <Button Content="Cancel" Name="btnCancel" Click="btnCancel_Click" IsCancel="True" Margin="5" />
+        </StackPanel>
+    </Grid>
+</Window>

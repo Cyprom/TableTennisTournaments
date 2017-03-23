@@ -1,0 +1,15 @@
+﻿<Window x:Class="Cyprom.TableTennisTournaments.View.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:menu="clr-namespace:Cyprom.TableTennisTournaments.View.Menu"
+        Title="MainWindow" Height="700" Width="1000" WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <menu:MenuBar DockPanel.Dock="Top" />
+        <UserControl Name="ucContent" Background="LightGray" DockPanel.Dock="Bottom">
+            <Grid>
+                <Image Source="Images/intro.png" />
+                <Button Name="btnStart" Content="Start" Click="btnStart_Click" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10" />
+            </Grid>
+        </UserControl>
+    </DockPanel>
+</Window>

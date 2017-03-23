@@ -1,0 +1,9 @@
+E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Data\bin\Debug\Database.sdf
+E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Data\bin\Debug\Cyprom.TableTennisTournaments.Data.dll.config
+E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Data\bin\Debug\Cyprom.TableTennisTournaments.Data.dll
+E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Data\bin\Debug\Cyprom.TableTennisTournaments.Data.pdb
+E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Data\bin\Debug\Cyprom.TableTennisTournaments.Model.dll
+E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Data\bin\Debug\Cyprom.TableTennisTournaments.Model.pdb
+E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Data\obj\Debug\Cyprom.TableTennisTournaments.Data.csprojResolveAssemblyReference.cache
+E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Data\obj\Debug\Cyprom.TableTennisTournaments.Data.dll
+E:\Documents\Visual Studio Projects\Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Data\obj\Debug\Cyprom.TableTennisTournaments.Data.pdb

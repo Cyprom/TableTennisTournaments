@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Cyprom.TableTennisTournaments.View.Overviews.TeamOverview"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Content="Teams" />
+        <DataGrid Grid.Row="1" Name="grdTeams" AutoGenerateColumns="False" SelectionMode="Single" SelectionChanged="TeamSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Player 1" Binding="{Binding Name1}" />
+                <DataGridTextColumn Header="Ranking 1" Binding="{Binding Ranking1}" />
+                <DataGridTextColumn Header="Player 2" Binding="{Binding Name2}" />
+                <DataGridTextColumn Header="Ranking 2" Binding="{Binding Ranking2}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Button Content="New" Name="btnNew" Click="CreateTeam" HorizontalAlignment="Left" Margin="5" />
+            <Button Content="View" Name="btnView" Click="ViewTeam" HorizontalAlignment="Left" Margin="5" IsEnabled="False" />
+            <Button Content="Remove" Name="btnRemove" Click="RemoveTeam" HorizontalAlignment="Left" Margin="5" IsEnabled="False" />
+        </StackPanel>
+    </Grid>
+</UserControl>

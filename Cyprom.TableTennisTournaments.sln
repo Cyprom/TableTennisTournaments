@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyprom.TableTennisTournaments.Model", "Cyprom.TableTennisTournaments\Cyprom.TableTennisTournaments.Model.csproj", "{2D6AABED-AE51-43EC-88CD-C1FCB17D2152}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyprom.TableTennisTournaments.TestApp", "Cyprom.TableTennisTournaments.TestApp\Cyprom.TableTennisTournaments.TestApp.csproj", "{E3C6ABD2-FBED-4AEB-BB57-46FF96B32BC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyprom.TableTennisTournaments.Data", "Cyprom.TableTennisTournaments.Data\Cyprom.TableTennisTournaments.Data.csproj", "{0B93BE2C-AC63-4328-A09A-05DD65680CEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyprom.TableTennisTournaments.Business", "Cyprom.TableTennisTournaments.Business\Cyprom.TableTennisTournaments.Business.csproj", "{BC5649BF-0DEB-42CB-A4AE-5EE7AFBCED38}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cyprom.TableTennisTournaments.View", "Cyprom.TableTennisTournaments.View\Cyprom.TableTennisTournaments.View.csproj", "{4568A1AE-1E30-472D-9B38-9A4F70EE9E99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D6AABED-AE51-43EC-88CD-C1FCB17D2152}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D6AABED-AE51-43EC-88CD-C1FCB17D2152}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D6AABED-AE51-43EC-88CD-C1FCB17D2152}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D6AABED-AE51-43EC-88CD-C1FCB17D2152}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3C6ABD2-FBED-4AEB-BB57-46FF96B32BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3C6ABD2-FBED-4AEB-BB57-46FF96B32BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3C6ABD2-FBED-4AEB-BB57-46FF96B32BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3C6ABD2-FBED-4AEB-BB57-46FF96B32BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B93BE2C-AC63-4328-A09A-05DD65680CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B93BE2C-AC63-4328-A09A-05DD65680CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B93BE2C-AC63-4328-A09A-05DD65680CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B93BE2C-AC63-4328-A09A-05DD65680CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC5649BF-0DEB-42CB-A4AE-5EE7AFBCED38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC5649BF-0DEB-42CB-A4AE-5EE7AFBCED38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC5649BF-0DEB-42CB-A4AE-5EE7AFBCED38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC5649BF-0DEB-42CB-A4AE-5EE7AFBCED38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4568A1AE-1E30-472D-9B38-9A4F70EE9E99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4568A1AE-1E30-472D-9B38-9A4F70EE9E99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4568A1AE-1E30-472D-9B38-9A4F70EE9E99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4568A1AE-1E30-472D-9B38-9A4F70EE9E99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
