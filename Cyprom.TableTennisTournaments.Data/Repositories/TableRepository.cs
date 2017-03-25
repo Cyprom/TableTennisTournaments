@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Collections.Generic;
 using Cyprom.TableTennisTournaments.Model;
+using Cyprom.TableTennisTournaments.Model.Managers;
 
 namespace Cyprom.TableTennisTournaments.Data.Repositories
 {
@@ -31,9 +32,11 @@ namespace Cyprom.TableTennisTournaments.Data.Repositories
             var number = (short)dict["Number"];
             var tournamentID = (Guid)dict["TournamentID"];
             var matchIDs = ListSplit(dict["MatchIDs"].ToString()).Select(s => Guid.Parse(s)).ToList();
-            //var obj = new Table(ModelManager.GetTournament(tournamentID), number);
-            // TODO: Complete
-            return null;
+            var obj = ModelManager.CreateTable(number);
+            obj.ID = id;
+            obj.Tournament = ModelManager.GetTournament(tournamentID);
+            obj.Matches = ModelManager.GetMatches(matchIDs);
+            return obj;
         }
     }
 }

@@ -9,21 +9,14 @@ namespace Cyprom.TableTennisTournaments.Model
 
         internal Identifiable()
         {
-            _iD = Guid.NewGuid();
+            ID = Guid.NewGuid();
         }
 
         #endregion
 
         #region Properties
 
-        private Guid _iD;
-        public Guid ID
-        {
-            get
-            {
-                return _iD;
-            }
-        }
+        public Guid ID { get; set; }
 
         #endregion
 

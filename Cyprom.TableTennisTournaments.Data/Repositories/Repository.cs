@@ -24,16 +24,17 @@ namespace Cyprom.TableTennisTournaments.Data.Repositories
         public bool Exists(Guid id)
         {
             var query = new StringBuilder();
-            query.Append("SELECT TOP 1 * FROM ");
+            query.Append("SELECT TOP 1 * FROM [");
             query.Append(TableName);
-            query.Append(" WHERE ID = @id");
+            query.Append("] WHERE ID = @id");
             var result = false;
             using (var connection = new SqlCeConnection(Settings.Default.DatabaseConnectionString))
             {
+                connection.Open();
                 var command = new SqlCeCommand(query.ToString(), connection);
                 command.Parameters.AddWithValue("id", id);
                 var reader = command.ExecuteReader();
-                if (reader.HasRows)
+                if (reader.Read())
                 {
                     result = true;
                 }
@@ -48,12 +49,14 @@ namespace Cyprom.TableTennisTournaments.Data.Repositories
             var query = new StringBuilder();
             query.Append("SELECT ");
             query.Append(string.Join(", ", columns));
-            query.Append(" FROM ");
+            query.Append(" FROM [");
             query.Append(TableName);
+            query.Append("]");
 
             var results = new List<T>();
             using (var connection = new SqlCeConnection(Settings.Default.DatabaseConnectionString))
             {
+                connection.Open();
                 var command = new SqlCeCommand(query.ToString(), connection);
                 var reader = command.ExecuteReader();
                 while (reader.Read())
@@ -76,24 +79,25 @@ namespace Cyprom.TableTennisTournaments.Data.Repositories
             var query = new StringBuilder();
             query.Append("SELECT ");
             query.Append(string.Join(", ", columns));
-            query.Append(" FROM ");
+            query.Append(" FROM [");
             query.Append(TableName);
-            query.Append(" WHERE ID = @id");
+            query.Append("] WHERE ID = @id");
             T selection = null;
             
             using (var connection = new SqlCeConnection(Settings.Default.DatabaseConnectionString))
             {
+                connection.Open();
                 var command = new SqlCeCommand(query.ToString(), connection);
                 command.Parameters.AddWithValue("id", id);
                 var reader = command.ExecuteReader();
-                if (reader.HasRows)
+                if (reader.Read())
                 {
                     var result = new Dictionary<string, object>();
                     foreach (var column in columns)
                     {
                         result[column] = reader[column];
-                        selection = DictionaryToObject(result);
                     }
+                    selection = DictionaryToObject(result);
                 }
                 connection.Close();
             }
@@ -104,15 +108,16 @@ namespace Cyprom.TableTennisTournaments.Data.Repositories
         {
             var parameters = ObjectToDictionary(obj);
             var query = new StringBuilder();
-            query.Append("INSERT INTO ");
+            query.Append("INSERT INTO [");
             query.Append(TableName);
-            query.Append(" (");
+            query.Append("] (");
             query.Append(string.Join(", ", parameters.Keys));
             query.Append(") VALUES (");
             query.Append(string.Join(", ", parameters.Keys.Select(p => string.Format("@{0}", p.ToLowerInvariant()))));
             query.Append(")");
             using (var connection = new SqlCeConnection(Settings.Default.DatabaseConnectionString))
             {
+                connection.Open();
                 var command = new SqlCeCommand(query.ToString(), connection);
                 foreach (var parameter in parameters)
                 {
@@ -127,13 +132,14 @@ namespace Cyprom.TableTennisTournaments.Data.Repositories
         {
             var parameters = ObjectToDictionary(obj);
             var query = new StringBuilder();
-            query.Append("UPDATE ");
+            query.Append("UPDATE [");
             query.Append(TableName);
-            query.Append(" SET ");
+            query.Append("] SET ");
             query.Append(string.Join(", ", parameters.Select(p => string.Format("{0} = @{1}", p.Key, p.Key.ToLowerInvariant()))));
             query.Append(" WHERE ID = @id");
             using (var connection = new SqlCeConnection(Settings.Default.DatabaseConnectionString))
             {
+                connection.Open();
                 var command = new SqlCeCommand(query.ToString(), connection);
                 foreach (var parameter in parameters)
                 {
@@ -147,11 +153,12 @@ namespace Cyprom.TableTennisTournaments.Data.Repositories
         public void Delete(Guid id)
         {
             var query = new StringBuilder();
-            query.Append("DELETE FROM ");
+            query.Append("DELETE FROM [");
             query.Append(TableName);
-            query.Append(" WHERE ID = @id");
+            query.Append("] WHERE ID = @id");
             using (var connection = new SqlCeConnection(Settings.Default.DatabaseConnectionString))
             {
+                connection.Open();
                 var command = new SqlCeCommand(query.ToString(), connection);
                 command.Parameters.AddWithValue("id", id);
                 command.ExecuteNonQuery();
